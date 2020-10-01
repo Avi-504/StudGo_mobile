@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "385020909726",
+    "firebase_url": "https://studgo-7c636.firebaseio.com",
+    "project_id": "studgo-7c636",
+    "storage_bucket": "studgo-7c636.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:385020909726:android:f584d338826c1ca5a9438f",
+        "android_client_info": {
+          "package_name": "com.studgo.StudGo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "385020909726-5o0c29iljqisp8eah3q1bt74qdaq4asp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.studgo.StudGo",
+            "certificate_hash": "9b3953e2178110171a34a3971d3d127df59b865b"
+          }
+        },
+        {
+          "client_id": "385020909726-u2dm0bihu5lgg8750kbaabrqki7vmmoo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJ942g3KFqIKDak1VL-yZESY4ufv6gjD4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "385020909726-u2dm0bihu5lgg8750kbaabrqki7vmmoo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
