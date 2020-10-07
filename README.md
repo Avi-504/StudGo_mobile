@@ -1,6 +1,6 @@
 # StudGo
 
-This is the the android and ios implementation of StudGo Project(A skill development platform for tech students)
+This is the android and ios implementation of StudGo Project(A skill development platform for tech students)
 
 ## Getting Started
 
