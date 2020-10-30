@@ -1,4 +1,6 @@
+// import 'package:StudGo/Screens/cp_event.dart';
 import 'package:StudGo/Screens/home.dart';
+import 'package:StudGo/providers/comp.dart';
 import 'package:StudGo/providers/news.dart';
 import 'package:StudGo/providers/task.dart';
 import 'package:flutter/material.dart';
@@ -23,6 +25,7 @@ class MyApp extends StatelessWidget {
           value: Task(),
         ),
         ChangeNotifierProvider.value(value: News()),
+        ChangeNotifierProvider.value(value: Comp()),
       ],
       child: MaterialApp(
         title: 'StudGO',

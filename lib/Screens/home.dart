@@ -90,6 +90,7 @@ class _HomeState extends State<Home> {
     Navigator.of(context).pushReplacement(MaterialPageRoute(
       builder: (context) => Home(),
     ));
+    Navigator.of(context).pop();
   }
 
   void handleSignIn(GoogleSignInAccount account) {
@@ -202,7 +203,7 @@ class _HomeState extends State<Home> {
             newUser
                 ? userguide =
                     'Start your Technical journey with StudGo in a very fun and intitutive way'
-                : 'Welcome Back To StudGO Continue Your Technical Journey with Us..',
+                : 'Welcome Back To StudGO continue Your Technical Journey with us..',
             logout)
         : signin();
   }

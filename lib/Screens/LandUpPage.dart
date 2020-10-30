@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:StudGo/Screens/Profile.dart';
+import 'package:StudGo/Screens/cp.dart';
 import 'package:StudGo/Screens/home.dart';
 import 'package:StudGo/Screens/news_screen.dart';
 import 'package:StudGo/Screens/to-do.dart';
@@ -280,12 +281,72 @@ class _LandUpPageState extends State<LandUpPage> {
                   child: Container(
                     height: MediaQuery.of(context).size.height * 0.6,
                     decoration: BoxDecoration(
-                      color: Colors.green,
+                      color: Colors.green[700],
                       borderRadius: BorderRadius.circular(15),
                     ),
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Text('sf'),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          SizedBox(
+                            height: 15,
+                          ),
+                          Text(
+                            'Sharpen Your Skills',
+                            style: TextStyle(color: Colors.white, fontSize: 26),
+                          ),
+                          Text(
+                            'Compete online at top platforms',
+                            style: TextStyle(color: Colors.amber, fontSize: 20),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Container(
+                            height: MediaQuery.of(context).size.height * 0.45,
+                            width: MediaQuery.of(context).size.width * 0.8,
+                            decoration: BoxDecoration(
+                              color: Colors.white30,
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    'Codeforces, Codechef, Google, Leetcode,etc',
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 20),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                                Container(
+                                  height: 100,
+                                  width: 100,
+                                  child: Image.asset(
+                                    'images/icons8-google-code-96.png',
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: RaisedButton(
+                                    child: Text('Go To Events'),
+                                    color: Colors.greenAccent[400],
+                                    onPressed: () => Navigator.of(context).push(
+                                      MaterialPageRoute(
+                                          builder: (context) => Competetive(),
+                                          fullscreenDialog: false),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),

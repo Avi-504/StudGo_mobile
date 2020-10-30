@@ -23,16 +23,19 @@ class Task with ChangeNotifier {
   }
 
   void deleteTask(String docId) {
+    getTasks();
     final existingTaskIndex = tasks.indexWhere((task) => task.docId == docId);
     tasks.removeAt(existingTaskIndex);
     notifyListeners();
   }
 
   void updateTasks(String docId, TodoItem updatedTask) {
+    getTasks();
     final taskIndex = tasks.indexWhere((task) => task.docId == docId);
     if (taskIndex >= 0) {
       tasks[taskIndex] = updatedTask;
     }
+    getTasks();
     notifyListeners();
   }
 
@@ -43,8 +46,8 @@ class Task with ChangeNotifier {
         .collection('task')
         .getDocuments();
     doc.documents.forEach((element) {
-      print(element.documentID);
-      print(element.data);
+      // print(element.documentID);
+      // print(element.data);
       loadedTasks.insert(
         0,
         TodoItem(
