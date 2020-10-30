@@ -48,6 +48,10 @@ class _TodoState extends State<Todo> {
         content: contentController,
         docId: doc.documentID);
     contentController = '';
+    Provider.of<Task>(context, listen: false).getTasks();
+    setState(() {
+      print("SETTING STATE");
+    });
   }
 
   void bottomModalSheet() {

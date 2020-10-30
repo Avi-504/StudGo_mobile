@@ -106,8 +106,11 @@ class _TaskItemState extends State<TaskItem> {
           .delete();
       Provider.of<Task>(context, listen: false).deleteTask(widget.docId);
     }
-    // setState(() {});
-    Provider.of<Task>(context).getTasks();
+    Provider.of<Task>(context, listen: false).getTasks();
+    Navigator.of(context).pop();
+    setState(() {
+      print("set State");
+    });
   }
 
   @override
@@ -176,44 +179,52 @@ class _TaskItemState extends State<TaskItem> {
                         SizedBox(
                           width: 15,
                         ),
-                        Column(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            SizedBox(
-                              height:
-                                  MediaQuery.of(context).size.height * 0.005,
-                            ),
-                            Expanded(
-                              child: Text(
-                                widget.title,
-                                style: TextStyle(
-                                  color:
-                                      isDone ? Colors.white : Colors.green[600],
-                                  fontSize: 22,
-                                  decoration: isDone
-                                      ? TextDecoration.lineThrough
-                                      : TextDecoration.none,
+                        Expanded(
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.005,
+                              ),
+                              Expanded(
+                                child: Text(
+                                  widget.title,
+                                  overflow: TextOverflow.ellipsis,
+                                  softWrap: true,
+                                  style: TextStyle(
+                                    color: isDone
+                                        ? Colors.white
+                                        : Colors.green[600],
+                                    fontSize: 22,
+                                    decoration: isDone
+                                        ? TextDecoration.lineThrough
+                                        : TextDecoration.none,
+                                  ),
                                 ),
                               ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Expanded(
-                              child: Text(
-                                widget.content,
-                                style: TextStyle(
-                                  color: isDone ? Colors.white : Colors.grey,
-                                  fontSize: 17,
-                                  decoration: isDone
-                                      ? TextDecoration.lineThrough
-                                      : TextDecoration.none,
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Expanded(
+                                child: Text(
+                                  widget.content,
+                                  textAlign: TextAlign.left,
+                                  overflow: TextOverflow.fade,
+                                  style: TextStyle(
+                                    color: isDone ? Colors.white : Colors.grey,
+                                    fontSize: 17,
+                                    decoration: isDone
+                                        ? TextDecoration.lineThrough
+                                        : TextDecoration.none,
+                                  ),
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
+
                         // SizedBox(
                         //   width: MediaQuery.of(context).size.width * 0.2,
                         // ),

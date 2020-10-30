@@ -72,6 +72,20 @@ flutter:
     - images/icons8-news-96.png
     - images/px-tile-1920x1080.png
     - images/px-tile.png
+    - images/icons8-google-code-96.png
+    - images/codeforces.png
+    - images/codechef1.png
+    - images/google.png
+    - images/leetcode.png
+    - images/cp1.png
+    - images/cp2.png
+    - images/cp3.png
+    - images/cp4.png
+    - images/cp5.png
+    - images/cp6.jpg
+    - images/cp7.png
+    - images/cp8.png
+    - images/cp9.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
