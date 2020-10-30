@@ -1,6 +1,6 @@
 # StudGo
 
-A new Flutter project.
+This is the android and ios implementation of StudGo Project(A skill development platform for tech students)
 
 ## Getting Started
 
