@@ -13,7 +13,7 @@ class CpStatic extends StatelessWidget {
           'StudGO',
           style: TextStyle(
               color: Colors.green[600],
-              fontSize: 30,
+              fontSize: 31,
               fontFamily: 'MavenPro',
               fontWeight: FontWeight.bold),
         ),
