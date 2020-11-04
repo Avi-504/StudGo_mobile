@@ -1,9 +1,7 @@
 import 'package:StudGo/models/event.dart';
-import 'package:StudGo/providers/task.dart';
 import 'package:flutter/material.dart';
 import 'package:StudGo/Screens/home.dart';
 import 'package:StudGo/Screens/to-do.dart';
-import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class EventItem extends StatefulWidget {
@@ -45,10 +43,15 @@ class _EventItemState extends State<EventItem> {
         'content': 'Competetive Coding Contest',
         'title': widget.eventItem.event,
         'done': false,
+        'taskID': '',
       });
-      Provider.of<Task>(context, listen: false).addTask(
-          title: widget.eventItem.event, content: '', docId: doc.documentID);
-      Provider.of<Task>(context, listen: false).getTasks();
+      await taskRef
+          .document(currentUser.email)
+          .collection('task')
+          .document(doc.documentID)
+          .updateData({
+        'taskID': doc.documentID,
+      });
       Scaffold.of(context).showSnackBar(
         SnackBar(
           content: Text(

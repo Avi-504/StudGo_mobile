@@ -1,9 +1,7 @@
 import 'package:StudGo/Screens/home.dart';
 import 'package:StudGo/Screens/to-do.dart';
-import 'package:StudGo/models/to-doItem.dart';
-import 'package:StudGo/providers/task.dart';
+
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class TaskItem extends StatefulWidget {
   final String title;
@@ -50,15 +48,6 @@ class _TaskItemState extends State<TaskItem> {
       setState(() {
         isDone = !isDone;
       });
-      Provider.of<Task>(context, listen: false).updateTasks(
-        widget.docId,
-        TodoItem(
-          docId: widget.docId,
-          done: isDone,
-          content: widget.content,
-          title: widget.title,
-        ),
-      );
       if (isDone) {
         deleteTask(
             content: 'Delete this Completed Task?',
@@ -104,13 +93,7 @@ class _TaskItemState extends State<TaskItem> {
           .collection('task')
           .document(widget.docId)
           .delete();
-      Provider.of<Task>(context, listen: false).deleteTask(widget.docId);
     }
-    Provider.of<Task>(context, listen: false).getTasks();
-    Navigator.of(context).pop();
-    setState(() {
-      print("set State");
-    });
   }
 
   @override
@@ -122,32 +105,6 @@ class _TaskItemState extends State<TaskItem> {
             children: [
               InkWell(
                 onLongPress: deleteTask,
-                // child: ListTile(
-                // leading: GestureDetector(
-                //   child: isDone
-                //       ? Image.asset('images/icons8-tick-box-32.png')
-                //       : Icon(
-                //           Icons.crop_square,
-                //           color: Colors.green[600],
-                //           size: 36,
-                //         ), // : Icon(Icons.ac_unit)
-                //   onTap: updateStatus,
-                // ),
-                // subtitle: Text(
-                //   widget.content,
-                //   style: TextStyle(
-                //     color: Colors.grey,
-                //     fontSize: 12,
-                //   ),
-                // ),
-                // title: Text(
-                //   widget.title,
-                //   style: TextStyle(
-                //     color: Colors.green[600],
-                //     fontSize: 18,
-                //   ),
-                // ),
-                // ),
                 child: Container(
                   height: MediaQuery.of(context).size.height * 0.13,
                   width: MediaQuery.of(context).size.width * 0.9,
@@ -224,24 +181,6 @@ class _TaskItemState extends State<TaskItem> {
                             ],
                           ),
                         ),
-
-                        // SizedBox(
-                        //   width: MediaQuery.of(context).size.width * 0.2,
-                        // ),
-                        // GestureDetector(
-                        //   child: isDone
-                        //       ? Icon(
-                        //           Icons.check_circle,
-                        //           color: Colors.white,
-                        //           size: 36,
-                        //         )
-                        //       : Icon(
-                        //           Icons.check_circle_outline,
-                        //           color: Colors.green[600],
-                        //           size: 36,
-                        //         ),
-                        //   onTap: updateStatus,
-                        // ),
                       ],
                     ),
                   ),
@@ -250,9 +189,6 @@ class _TaskItemState extends State<TaskItem> {
               SizedBox(
                 height: 10,
               ),
-              // Divider(
-              //   color: Colors.grey[100],
-              // ),
             ],
           );
   }

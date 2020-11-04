@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:StudGo/Screens/Blogs.dart';
 import 'package:StudGo/Screens/Profile.dart';
 import 'package:StudGo/Screens/cp.dart';
 import 'package:StudGo/Screens/home.dart';
@@ -7,7 +8,6 @@ import 'package:StudGo/Screens/to-do.dart';
 import 'package:StudGo/models/users.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-// import 'package:flutter_svg/flutter_svg.dart';
 
 class LandUpPage extends StatefulWidget {
   final String userguide;
@@ -355,12 +355,72 @@ class _LandUpPageState extends State<LandUpPage> {
                   child: Container(
                     height: MediaQuery.of(context).size.height * 0.6,
                     decoration: BoxDecoration(
-                      color: Colors.blue,
+                      color: Colors.blue[700],
                       borderRadius: BorderRadius.circular(15),
                     ),
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Text('sf'),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          SizedBox(
+                            height: 15,
+                          ),
+                          Text(
+                            'Show them all',
+                            style: TextStyle(color: Colors.white, fontSize: 26),
+                          ),
+                          Text(
+                            'StudGO Blogs',
+                            style: TextStyle(color: Colors.amber, fontSize: 20),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Container(
+                            height: MediaQuery.of(context).size.height * 0.45,
+                            width: MediaQuery.of(context).size.width * 0.8,
+                            decoration: BoxDecoration(
+                              color: Colors.white30,
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    'Write about your day to day technical journey and share with same minded people around',
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 20),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                                Container(
+                                  height: 100,
+                                  width: 100,
+                                  child: Image.asset(
+                                    'images/icons8-blogger-96.png',
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: RaisedButton(
+                                    child: Text('Go To EXP3000'),
+                                    color: Colors.blue[400],
+                                    onPressed: () => Navigator.of(context).push(
+                                      MaterialPageRoute(
+                                          builder: (context) => Blogs(),
+                                          fullscreenDialog: false),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),

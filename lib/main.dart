@@ -1,8 +1,7 @@
-// import 'package:StudGo/Screens/cp_event.dart';
 import 'package:StudGo/Screens/home.dart';
 import 'package:StudGo/providers/comp.dart';
 import 'package:StudGo/providers/news.dart';
-import 'package:StudGo/providers/task.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -21,9 +20,6 @@ class MyApp extends StatelessWidget {
     ]);
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider.value(
-          value: Task(),
-        ),
         ChangeNotifierProvider.value(value: News()),
         ChangeNotifierProvider.value(value: Comp()),
       ],
