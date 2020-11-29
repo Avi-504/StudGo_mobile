@@ -46,6 +46,7 @@ class _NewsScreenState extends State<NewsScreen> {
             )
           : ListView.builder(
               itemCount: 30,
+              cacheExtent: 1000000000,
               itemBuilder: (context, index) => NewsItem(list[index]),
             ),
     );

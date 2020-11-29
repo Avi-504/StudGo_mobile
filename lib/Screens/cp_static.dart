@@ -88,7 +88,7 @@ class CpStatic extends StatelessWidget {
               width: MediaQuery.of(context).size.width * 0.8,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('images/cp3.png'), fit: BoxFit.cover),
+                    image: AssetImage('images/cp3.png'), fit: BoxFit.fill),
               ),
             ),
           ),
@@ -185,7 +185,7 @@ class CpStatic extends StatelessWidget {
               width: MediaQuery.of(context).size.width * 0.8,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('images/cp5.png'), fit: BoxFit.cover),
+                    image: AssetImage('images/cp5.png'), fit: BoxFit.fill),
               ),
             ),
           ),

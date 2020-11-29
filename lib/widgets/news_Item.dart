@@ -38,6 +38,21 @@ class _NewsItemState extends State<NewsItem> {
 
   void openBrowser() async {
     final url = newsUrl;
+    Scaffold.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+          'Jus a moment Baking a Crisp News',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        duration: Duration(
+          seconds: 2,
+        ),
+      ),
+    );
     if (await canLaunch(url)) {
       await launch(
         url,

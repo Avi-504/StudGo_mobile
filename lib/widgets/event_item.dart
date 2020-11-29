@@ -70,6 +70,21 @@ class _EventItemState extends State<EventItem> {
 
   void openBrowser() async {
     final url = widget.eventItem.url;
+    Scaffold.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+          'Hold Tight launching you to the contest!!',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        duration: Duration(
+          seconds: 2,
+        ),
+      ),
+    );
     if (await canLaunch(url)) {
       await launch(
         url,

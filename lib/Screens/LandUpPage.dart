@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:StudGo/Screens/All_fea.dart';
 import 'package:StudGo/Screens/Blogs.dart';
 import 'package:StudGo/Screens/Profile.dart';
 import 'package:StudGo/Screens/cp.dart';
@@ -52,6 +53,8 @@ class _LandUpPageState extends State<LandUpPage> {
               child: Center(child: CircularProgressIndicator()),
             )
           : ListView(
+              shrinkWrap: true,
+              physics: ScrollPhysics(),
               children: [
                 SingleChildScrollView(
                   child: InkWell(
@@ -420,6 +423,39 @@ class _LandUpPageState extends State<LandUpPage> {
                             ),
                           ),
                         ],
+                      ),
+                    ),
+                  ),
+                ),
+                SingleChildScrollView(
+                  child: InkWell(
+                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => Features(),
+                        fullscreenDialog: true)),
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                          top: 4, left: 8, right: 8, bottom: 8),
+                      child: Container(
+                        height: MediaQuery.of(context).size.height * 0.12,
+                        width: MediaQuery.of(context).size.width * 0.9,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            color: Colors.pink[200]),
+                        child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                'More',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 24,
+                                ),
+                              ),
+                            ]),
                       ),
                     ),
                   ),

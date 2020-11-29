@@ -242,7 +242,7 @@ class _CompetetiveState extends State<Competetive> {
                   builder: (context) => CpStatic(), fullscreenDialog: false),
             ),
             child: Text(
-              'Not sure about competetive programming?',
+              'Not sure about competitive programming?',
               style: TextStyle(color: Colors.grey),
             ),
           ),
