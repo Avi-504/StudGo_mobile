@@ -1,17 +1,18 @@
 import 'package:StudGo/Screens/home.dart';
-import 'package:StudGo/Screens/projects.dart';
 import 'package:StudGo/models/users.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class UpDownVote extends StatefulWidget {
-  final projectID;
+  final packageID;
   final pageName;
+  final ref;
 
   UpDownVote({
-    this.projectID,
+    this.packageID,
     this.pageName,
+    this.ref,
   });
   @override
   _UpDownVoteState createState() => _UpDownVoteState();
@@ -25,14 +26,13 @@ class _UpDownVoteState extends State<UpDownVote> {
   @override
   void initState() {
     getuserVotes();
-    projectref.document(widget.projectID).get();
+    widget.ref.document(widget.packageID).get();
 
     super.initState();
   }
 
   void getuserVotes() async {
-    DocumentSnapshot ref = await projectref.document(widget.projectID).get();
-    print(ref.data['likes']);
+    DocumentSnapshot ref = await widget.ref.document(widget.packageID).get();
     setusers(context, ref);
   }
 

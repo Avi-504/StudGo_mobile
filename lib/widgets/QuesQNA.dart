@@ -1,45 +1,41 @@
+import 'package:StudGo/Screens/QNA.dart';
+import 'package:StudGo/Screens/ansQues.dart';
 import 'package:StudGo/Screens/home.dart';
-import 'package:StudGo/Screens/projects.dart';
 import 'package:StudGo/Screens/up_downvote.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
-class ProjectItem extends StatefulWidget {
+class QuesQNA extends StatefulWidget {
   final String author;
-  final String projectID;
+  final String quesID;
   final String userEmail;
-  final String content;
   final Map upvotes;
   final Map downvotes;
   final String photoUrl;
   final String tags;
-  final String title;
   final String timeAgo;
-  final String link;
+  final String question;
   final int upvoteCounter;
   final int downvoteCounter;
 
-  ProjectItem({
+  QuesQNA({
     this.author,
-    this.content,
     this.downvoteCounter,
     this.downvotes,
-    this.link,
     this.photoUrl,
-    this.projectID,
+    this.quesID,
+    this.question,
     this.tags,
     this.timeAgo,
-    this.title,
     this.upvoteCounter,
     this.upvotes,
     this.userEmail,
   });
   @override
-  _ProjectItemState createState() => _ProjectItemState();
+  _QuesQNAState createState() => _QuesQNAState();
 }
 
-class _ProjectItemState extends State<ProjectItem> {
+class _QuesQNAState extends State<QuesQNA> {
   var delete = false;
   var upvoteCount;
   var downvoteCount;
@@ -57,19 +53,6 @@ class _ProjectItemState extends State<ProjectItem> {
     return count;
   }
 
-  int getLikesCount(likes) {
-    if (likes == null) {
-      return 0;
-    }
-    int count = 0;
-    likes.values.forEach((value) {
-      if (value) {
-        count += 1;
-      }
-    });
-    return count;
-  }
-
   void handleUpvote() {
     var _isUpvoted = widget.upvotes[currentUser.email] == true;
     if (_isUpvoted) {
@@ -77,7 +60,7 @@ class _ProjectItemState extends State<ProjectItem> {
         upvoteCount -= 1;
         widget.upvotes[currentUser.email] = false;
       });
-      projectref.document(widget.projectID).updateData({
+      quesref.document(widget.quesID).updateData({
         'upvotes': widget.upvotes,
       });
     } else if (!_isUpvoted) {
@@ -86,7 +69,7 @@ class _ProjectItemState extends State<ProjectItem> {
         widget.upvotes[currentUser.email] = true;
         widget.downvotes[currentUser.email] = false;
       });
-      projectref.document(widget.projectID).updateData({
+      quesref.document(widget.quesID).updateData({
         'upvotes': widget.upvotes,
         'downvotes': widget.downvotes,
       });
@@ -112,7 +95,7 @@ class _ProjectItemState extends State<ProjectItem> {
         downvoteCount -= 1;
         widget.downvotes[currentUser.email] = false;
       });
-      projectref.document(widget.projectID).updateData({
+      quesref.document(widget.quesID).updateData({
         'downvotes': widget.downvotes,
       });
     } else if (!_isDownVoted) {
@@ -121,7 +104,7 @@ class _ProjectItemState extends State<ProjectItem> {
         widget.downvotes[currentUser.email] = true;
         widget.upvotes[currentUser.email] = false;
       });
-      projectref.document(widget.projectID).updateData({
+      quesref.document(widget.quesID).updateData({
         'downvotes': widget.downvotes,
         'upvotes': widget.upvotes,
       });
@@ -140,54 +123,9 @@ class _ProjectItemState extends State<ProjectItem> {
     }
   }
 
-  void openBrowser() async {
-    final url = widget.link;
-    Scaffold.of(context).showSnackBar(
-      SnackBar(
-        content: Text(
-          'Teleporting you to project site',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontSize: 14,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        duration: Duration(
-          seconds: 2,
-        ),
-      ),
-    );
-    if (await canLaunch(url)) {
-      await launch(
-        url,
-        forceWebView: true,
-        enableJavaScript: true,
-        webOnlyWindowName: url,
-        enableDomStorage: true,
-      );
-    } else {
-      Scaffold.of(context).showSnackBar(
-        SnackBar(
-          content: Text(
-            'Looks like the project url has moved or url is incorrect',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 14,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          duration: Duration(
-            seconds: 2,
-          ),
-        ),
-      );
-      throw 'Could not launch $url';
-    }
-  }
-
   void deleteProject(
       {String title = 'Are you Sure?',
-      String content = 'Do you want to remove this Project?'}) async {
+      String content = 'Do you want to remove this Question?'}) async {
     var projectOwner = widget.userEmail == currentUser.email;
     if (!projectOwner) {
       return;
@@ -214,7 +152,7 @@ class _ProjectItemState extends State<ProjectItem> {
     } else if (delete == false) {
       return;
     } else {
-      await projectref.document(widget.projectID).delete();
+      await quesref.document(widget.quesID).delete();
     }
   }
 
@@ -227,7 +165,7 @@ class _ProjectItemState extends State<ProjectItem> {
       title: GestureDetector(
         onTap: () => () {},
         child: Text(
-          widget.title,
+          '${widget.author} Asked the following',
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,
@@ -235,7 +173,7 @@ class _ProjectItemState extends State<ProjectItem> {
         ),
       ),
       trailing: Text(
-        'Added ${widget.timeAgo}',
+        'Asked ${widget.timeAgo}',
         style: TextStyle(color: Colors.white),
       ),
     );
@@ -257,9 +195,30 @@ class _ProjectItemState extends State<ProjectItem> {
               SingleChildScrollView(
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    '${widget.content}',
-                    style: TextStyle(color: Colors.white),
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(right: 10),
+                        child: CircleAvatar(
+                          radius: 15,
+                          child: Text(
+                            'Q',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 23,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Text(
+                        '${widget.question}',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -315,9 +274,9 @@ class _ProjectItemState extends State<ProjectItem> {
                   : () {
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => UpDownVote(
-                                packageID: widget.projectID,
+                                packageID: widget.quesID,
                                 pageName: 'UpVotes',
-                                ref: projectref,
+                                ref: quesref,
                               )));
                     },
               child: Container(
@@ -340,9 +299,9 @@ class _ProjectItemState extends State<ProjectItem> {
                   : () {
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => UpDownVote(
-                                packageID: widget.projectID,
+                                packageID: widget.quesID,
                                 pageName: 'DownVotes',
-                                ref: projectref,
+                                ref: quesref,
                               )));
                     },
               child: Container(
@@ -394,12 +353,20 @@ class _ProjectItemState extends State<ProjectItem> {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: GestureDetector(
-            onTap: openBrowser,
-            child: Text(
-              widget.link,
-              style: TextStyle(
-                color: Colors.blue,
+            onTap: () {},
+            child: FlatButton(
+              color: Colors.blue,
+              child: Text(
+                'Answers',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
               ),
+              onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => AnsQNA(
+                  quesID: widget.quesID,
+                ),
+              )),
             ),
           ),
         ),
