@@ -101,6 +101,19 @@ flutter:
     - images/os2.jpg
     - images/os3.png
     - images/os4.jpg
+    - images/cm1.png
+    - images/cm2.png
+    - images/cm3.png
+    - images/cm4.png
+    - images/cm5.png
+    - images/cm6.png
+    - images/cm7.png
+    - images/sof.png
+    - images/medium.png
+    - images/quora.png
+    - images/reddit.png
+    - images/kaggle.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
