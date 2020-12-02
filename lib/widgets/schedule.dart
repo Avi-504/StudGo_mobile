@@ -68,17 +68,26 @@ class _ScheduleItemState extends State<ScheduleItem> {
           height: 100,
           width: MediaQuery.of(context).size.width * 0.9,
           decoration: BoxDecoration(
-            color: Colors.indigoAccent,
+            color: Colors.cyan[900],
             borderRadius: BorderRadius.circular(15),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Text(
-                widget.title,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  color: Colors.black,
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    widget.title,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                    ),
+                  ),
                 ),
               ),
               Row(
@@ -91,10 +100,19 @@ class _ScheduleItemState extends State<ScheduleItem> {
                   SizedBox(
                     width: 18,
                   ),
-                  Text(
-                    '${widget.dayCount.toString()} Days',
-                    style: TextStyle(
-                      color: Colors.white,
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white12,
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        '${widget.dayCount.toString()} Days',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
                   ),
                 ],
