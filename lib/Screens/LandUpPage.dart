@@ -336,7 +336,7 @@ class _LandUpPageState extends State<LandUpPage> {
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: RaisedButton(
-                                    child: Text('Go To Events'),
+                                    child: Text('Go To CP MASTER'),
                                     color: Colors.greenAccent[400],
                                     onPressed: () => Navigator.of(context).push(
                                       MaterialPageRoute(
@@ -410,7 +410,7 @@ class _LandUpPageState extends State<LandUpPage> {
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: RaisedButton(
-                                    child: Text('Go To EXP3000'),
+                                    child: Text('Go To EXPERIENCE 3000'),
                                     color: Colors.blue[400],
                                     onPressed: () => Navigator.of(context).push(
                                       MaterialPageRoute(
@@ -436,11 +436,11 @@ class _LandUpPageState extends State<LandUpPage> {
                       padding: const EdgeInsets.only(
                           top: 4, left: 8, right: 8, bottom: 8),
                       child: Container(
-                        height: MediaQuery.of(context).size.height * 0.12,
+                        height: MediaQuery.of(context).size.height * 0.09,
                         width: MediaQuery.of(context).size.width * 0.9,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
-                            color: Colors.pink[200]),
+                            color: Colors.orange),
                         child: Column(
                             mainAxisSize: MainAxisSize.min,
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -449,10 +449,10 @@ class _LandUpPageState extends State<LandUpPage> {
                                 height: 10,
                               ),
                               Text(
-                                'More',
+                                'We got MORE..',
                                 style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 24,
+                                  fontSize: 18,
                                 ),
                               ),
                             ]),

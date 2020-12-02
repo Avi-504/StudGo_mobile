@@ -118,34 +118,6 @@ class _FeaturesState extends State<Features> {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              padding: EdgeInsets.all(10),
-              height: MediaQuery.of(context).size.height * 0.15,
-              width: MediaQuery.of(context).size.width * 0.9,
-              decoration: BoxDecoration(
-                color: Colors.white12,
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: InkWell(
-                onTap: () => {},
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'ABC',
-                      style: TextStyle(
-                        color: Colors.greenAccent,
-                        fontSize: 18,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
         ],
       ),
     );

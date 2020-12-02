@@ -79,7 +79,7 @@ class _CommLinksState extends State<CommLinks> {
               child: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    color: Colors.blueAccent),
+                    color: Colors.blue[400]),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -124,7 +124,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -145,7 +145,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -166,7 +166,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -200,7 +200,7 @@ class _CommLinksState extends State<CommLinks> {
               child: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    color: Colors.blueAccent),
+                    color: Colors.red[400]),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -246,7 +246,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -267,7 +267,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -288,7 +288,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -309,7 +309,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -343,7 +343,7 @@ class _CommLinksState extends State<CommLinks> {
               child: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    color: Colors.blueAccent),
+                    color: Colors.blue[400]),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -388,7 +388,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -409,7 +409,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -443,7 +443,7 @@ class _CommLinksState extends State<CommLinks> {
               child: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    color: Colors.blueAccent),
+                    color: Colors.red[400]),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -489,7 +489,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -510,7 +510,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -544,7 +544,7 @@ class _CommLinksState extends State<CommLinks> {
               child: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    color: Colors.blueAccent),
+                    color: Colors.blue[400]),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -589,7 +589,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -610,7 +610,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -644,7 +644,7 @@ class _CommLinksState extends State<CommLinks> {
               child: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    color: Colors.blueAccent),
+                    color: Colors.red[400]),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -690,7 +690,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -711,7 +711,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -732,7 +732,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -766,7 +766,7 @@ class _CommLinksState extends State<CommLinks> {
               child: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    color: Colors.blueAccent),
+                    color: Colors.blue[400]),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -812,7 +812,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -833,7 +833,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -867,7 +867,7 @@ class _CommLinksState extends State<CommLinks> {
               child: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    color: Colors.blueAccent),
+                    color: Colors.red[400]),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -913,7 +913,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -934,7 +934,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -955,7 +955,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -989,7 +989,7 @@ class _CommLinksState extends State<CommLinks> {
               child: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    color: Colors.blueAccent),
+                    color: Colors.blue[400]),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -1035,7 +1035,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -1056,7 +1056,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -1090,7 +1090,7 @@ class _CommLinksState extends State<CommLinks> {
               child: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    color: Colors.blueAccent),
+                    color: Colors.red[400]),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -1136,7 +1136,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -1157,7 +1157,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -1191,7 +1191,7 @@ class _CommLinksState extends State<CommLinks> {
               child: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    color: Colors.blueAccent),
+                    color: Colors.blue[400]),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -1237,7 +1237,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -1258,7 +1258,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -1292,7 +1292,7 @@ class _CommLinksState extends State<CommLinks> {
               child: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    color: Colors.blueAccent),
+                    color: Colors.red[400]),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -1338,7 +1338,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -1359,7 +1359,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -1393,7 +1393,7 @@ class _CommLinksState extends State<CommLinks> {
               child: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    color: Colors.blueAccent),
+                    color: Colors.blue[400]),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -1439,7 +1439,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -1473,7 +1473,7 @@ class _CommLinksState extends State<CommLinks> {
               child: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    color: Colors.blueAccent),
+                    color: Colors.red[400]),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -1519,7 +1519,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -1540,7 +1540,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -1561,7 +1561,7 @@ class _CommLinksState extends State<CommLinks> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.white12,
+                                      color: Colors.black,
                                       borderRadius: BorderRadius.circular(15)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),

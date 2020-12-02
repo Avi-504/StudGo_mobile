@@ -64,13 +64,15 @@ class _DayItemState extends State<DayItem> {
   }
 
   List<Widget> getSubjects(List<dynamic> subjects) {
+    // if (subjects.isEmpty) {
+    //   return [Container()];
+    // }
     subjects.forEach((element) {
       final subject = element['subject'];
       final priority = element['priority'];
       final topics = element['topics'];
-      eachSubject.add(GestureDetector(
-        onTap: addSubjecttoday,
-        child: Container(
+      eachSubject.add(
+        Container(
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -230,7 +232,7 @@ class _DayItemState extends State<DayItem> {
             ],
           ),
         ),
-      ));
+      );
     });
     return eachSubject;
   }
@@ -244,20 +246,46 @@ class _DayItemState extends State<DayItem> {
         SizedBox(
           height: 40,
         ));
-    return Padding(
-      padding: const EdgeInsets.all(10.0),
-      child: Container(
-        width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
-          color: Colors.redAccent,
-          borderRadius: BorderRadius.circular(15),
-        ),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: eachSubject,
-        ),
-      ),
-    );
+    return subjects.isEmpty
+        ? Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: GestureDetector(
+              onTap: addSubjecttoday,
+              child: Container(
+                alignment: Alignment.center,
+                width: MediaQuery.of(context).size.width,
+                height: 50,
+                decoration: BoxDecoration(
+                  color: Colors.redAccent,
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'No Subjects Added for Day ${widget.day}',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ),
+            ),
+          )
+        : Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: GestureDetector(
+              onTap: addSubjecttoday,
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                  color: Colors.black,
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: eachSubject,
+                ),
+              ),
+            ),
+          );
   }
 }

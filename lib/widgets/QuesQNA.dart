@@ -123,11 +123,11 @@ class _QuesQNAState extends State<QuesQNA> {
     }
   }
 
-  void deleteProject(
+  void deleteQuestion(
       {String title = 'Are you Sure?',
       String content = 'Do you want to remove this Question?'}) async {
-    var projectOwner = widget.userEmail == currentUser.email;
-    if (!projectOwner) {
+    var quesOwner = widget.userEmail == currentUser.email;
+    if (!quesOwner) {
       return;
     }
     delete = await showDialog(
@@ -156,7 +156,7 @@ class _QuesQNAState extends State<QuesQNA> {
     }
   }
 
-  Widget blogHeader() {
+  Widget quesHeader() {
     return ListTile(
       leading: CircleAvatar(
         backgroundImage: CachedNetworkImageProvider(widget.photoUrl),
@@ -179,16 +179,16 @@ class _QuesQNAState extends State<QuesQNA> {
     );
   }
 
-  Widget blogBody() {
+  Widget quesBody() {
     return GestureDetector(
-      onLongPress: deleteProject,
+      onLongPress: deleteQuestion,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
           width: MediaQuery.of(context).size.width * 1,
-          // height: MediaQuery.of(context).size.height * 0.35,
           decoration: BoxDecoration(
             color: Colors.white10,
+            borderRadius: BorderRadius.circular(15),
           ),
           child: Stack(
             children: [
@@ -229,7 +229,7 @@ class _QuesQNAState extends State<QuesQNA> {
     );
   }
 
-  Widget blogFooter() {
+  Widget quesfooter() {
     upvoteCount = getVote(widget.upvotes);
     downvoteCount = getVote(widget.downvotes);
     return Column(
@@ -379,9 +379,9 @@ class _QuesQNAState extends State<QuesQNA> {
     return Column(
       mainAxisSize: MainAxisSize.max,
       children: [
-        blogHeader(),
-        blogBody(),
-        blogFooter(),
+        quesHeader(),
+        quesBody(),
+        quesfooter(),
         Divider(
           color: Colors.grey,
         ),

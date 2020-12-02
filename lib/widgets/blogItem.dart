@@ -226,9 +226,10 @@ class _BlogItemState extends State<BlogItem> {
         padding: const EdgeInsets.all(8.0),
         child: Container(
           width: MediaQuery.of(context).size.width * 1,
-          height: MediaQuery.of(context).size.height * 0.67,
+          height: MediaQuery.of(context).size.height * 0.65,
           decoration: BoxDecoration(
             color: Colors.white10,
+            borderRadius: BorderRadius.circular(15),
           ),
           child: Stack(
             children: [

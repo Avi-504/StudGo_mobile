@@ -218,7 +218,7 @@ class _ProjectItemState extends State<ProjectItem> {
     }
   }
 
-  Widget blogHeader() {
+  Widget projectHeader() {
     return ListTile(
       leading: CircleAvatar(
         backgroundImage: CachedNetworkImageProvider(widget.photoUrl),
@@ -241,16 +241,16 @@ class _ProjectItemState extends State<ProjectItem> {
     );
   }
 
-  Widget blogBody() {
+  Widget projectBody() {
     return GestureDetector(
       onLongPress: deleteProject,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
           width: MediaQuery.of(context).size.width * 1,
-          // height: MediaQuery.of(context).size.height * 0.35,
           decoration: BoxDecoration(
             color: Colors.white10,
+            borderRadius: BorderRadius.circular(15),
           ),
           child: Stack(
             children: [
@@ -270,7 +270,7 @@ class _ProjectItemState extends State<ProjectItem> {
     );
   }
 
-  Widget blogFooter() {
+  Widget projectFooter() {
     upvoteCount = getVote(widget.upvotes);
     downvoteCount = getVote(widget.downvotes);
     return Column(
@@ -412,9 +412,9 @@ class _ProjectItemState extends State<ProjectItem> {
     return Column(
       mainAxisSize: MainAxisSize.max,
       children: [
-        blogHeader(),
-        blogBody(),
-        blogFooter(),
+        projectHeader(),
+        projectBody(),
+        projectFooter(),
         Divider(
           color: Colors.grey,
         ),
