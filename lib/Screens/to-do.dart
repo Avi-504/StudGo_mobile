@@ -37,7 +37,6 @@ class _TodoState extends State<Todo> {
         .updateData({
       'taskID': doc.documentID,
     });
-    // print(doc.documentID);
     Navigator.of(context).pop();
   }
 

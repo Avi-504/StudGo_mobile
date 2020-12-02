@@ -212,7 +212,6 @@ class _CompetetiveState extends State<Competetive> {
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               image: AssetImage('images/leetcode.png'),
-                              // fit: BoxFit.cover,
                             ),
                           ),
                         ),

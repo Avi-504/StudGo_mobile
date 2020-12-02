@@ -203,8 +203,6 @@ class _AnswersState extends State<Answers> {
     } else if (delete == false) {
       return;
     } else {
-      // print(blogId);
-      // print(commentID);
       await answerref
           .document(widget.quesID)
           .collection('answers')

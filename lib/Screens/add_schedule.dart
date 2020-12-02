@@ -194,7 +194,6 @@ class _AddScheduleState extends State<AddSchedule> {
               ),
             )
           : SingleChildScrollView(
-              // physics: NeverScrollableScrollPhysics(),
               child: Container(
                 height: MediaQuery.of(context).size.height,
                 decoration: BoxDecoration(

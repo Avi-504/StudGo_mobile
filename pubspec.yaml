@@ -66,21 +66,13 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - images/activity_feed.svg
+    
     - images/no_content.svg
-    - images/search.svg
-    - images/upload.svg
     - images/google_signin_button.png
     - images/studGO.png
-    - images/studGO_01.svg
     - images/icons8-to-do-96.png
-    - images/icons8-tick-box-32.png
-    - images/icons8-tick-box-32(1).png
     - images/degree-fabric-light.png
-    - images/Infinity-0.7s-200px.gif
     - images/icons8-news-96.png
-    - images/px-tile-1920x1080.png
-    - images/px-tile.png
     - images/icons8-google-code-96.png
     - images/codeforces.png
     - images/codechef1.png
@@ -104,10 +96,7 @@ flutter:
     - images/cm1.png
     - images/cm2.png
     - images/cm3.png
-    - images/cm4.png
-    - images/cm5.png
     - images/cm6.png
-    - images/cm7.png
     - images/sof.png
     - images/medium.png
     - images/quora.png
