@@ -122,6 +122,7 @@ class _DayItemState extends State<DayItem> {
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
                         '$subject',
+                        softWrap: true,
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
@@ -214,6 +215,7 @@ class _DayItemState extends State<DayItem> {
                       child: Text(
                         topics,
                         softWrap: true,
+                        overflow: TextOverflow.ellipsis,
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
