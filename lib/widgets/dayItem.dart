@@ -18,11 +18,49 @@ class DayItem extends StatefulWidget {
 class _DayItemState extends State<DayItem> {
   List<dynamic> subjects = [];
   List<Widget> eachSubject = [];
+  var add;
   @override
   void initState() {
     // subjects = widget.subjects as List<Map<String, Object>>;
     // getSubjects(subjects);
     super.initState();
+  }
+
+  void addSubjecttoday(
+      {String title = 'Are you Sure?',
+      String content = 'Do you want to add a Subject to this Day?'}) async {
+    add = await showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: Text(title),
+        content: Text(content),
+        actions: [
+          FlatButton(
+            onPressed: () => Navigator.of(ctx).pop(true),
+            child: Text('Yes'),
+          ),
+          FlatButton(
+            onPressed: () => Navigator.of(ctx).pop(false),
+            child: Text('No'),
+          ),
+        ],
+      ),
+    );
+    if (add == (null)) {
+      return;
+    } else if (add == false) {
+      return;
+    } else {
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (context) => SubjectToDay(
+            day: widget.day,
+            scheduleId: widget.scheduleId,
+            subjects: subjects,
+          ),
+        ),
+      );
+    }
   }
 
   List<Widget> getSubjects(List<dynamic> subjects) {
@@ -31,17 +69,8 @@ class _DayItemState extends State<DayItem> {
       final priority = element['priority'];
       final topics = element['topics'];
       eachSubject.add(GestureDetector(
-        onTap: () => Navigator.of(context).pushReplacement(
-          MaterialPageRoute(
-            builder: (context) => SubjectToDay(
-              day: widget.day,
-              scheduleId: widget.scheduleId,
-              subjects: subjects,
-            ),
-          ),
-        ),
+        onTap: addSubjecttoday,
         child: Container(
-          // height: MediaQuery.of(context).size.height * 0.25,
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -95,6 +124,12 @@ class _DayItemState extends State<DayItem> {
                       ),
                     ),
                   ),
+                  SizedBox(
+                    width: 60,
+                    child: Container(
+                      child: Text(''),
+                    ),
+                  ),
                 ],
               ),
               SizedBox(
@@ -137,6 +172,12 @@ class _DayItemState extends State<DayItem> {
                             ),
                     ),
                   ),
+                  SizedBox(
+                    width: 60,
+                    child: Container(
+                      child: Text(''),
+                    ),
+                  ),
                 ],
               ),
               SizedBox(
@@ -173,6 +214,12 @@ class _DayItemState extends State<DayItem> {
                         softWrap: true,
                         style: TextStyle(color: Colors.white),
                       ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 60,
+                    child: Container(
+                      child: Text(''),
                     ),
                   ),
                 ],
