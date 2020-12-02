@@ -55,7 +55,7 @@ class _CommunitiesState extends State<Communities> {
               Icons.category,
             ),
             title: Text(
-              'Communitites',
+              'Communities',
             ),
           ),
           BottomNavigationBarItem(

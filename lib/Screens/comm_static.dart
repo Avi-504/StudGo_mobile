@@ -93,7 +93,7 @@ class _CommStaticState extends State<CommStatic> {
               width: MediaQuery.of(context).size.width * 0.8,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('images/cm1.png'), fit: BoxFit.cover),
+                    image: AssetImage('images/cm1.png'), fit: BoxFit.fill),
               ),
             ),
           ),
@@ -143,7 +143,7 @@ class _CommStaticState extends State<CommStatic> {
               width: MediaQuery.of(context).size.width * 0.8,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('images/cm2.png'), fit: BoxFit.cover),
+                    image: AssetImage('images/cm2.png'), fit: BoxFit.fill),
               ),
             ),
           ),

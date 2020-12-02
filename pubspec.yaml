@@ -113,6 +113,20 @@ flutter:
     - images/quora.png
     - images/reddit.png
     - images/kaggle.png
+    - images/cpp.jpg
+    - images/ember.png
+    - images/firebase.png
+    - images/flutter.png
+    - images/mongodb.png
+    - images/net.png
+    - images/nodejs.png
+    - images/pandas.png
+    - images/python.png
+    - images/react.png
+    - images/redis.png
+    - images/tenserflow.png
+    - images/vue.jpg
+    - images/js.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
