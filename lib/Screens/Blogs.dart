@@ -2,9 +2,7 @@ import 'package:StudGo/Screens/add_blog.dart';
 import 'package:StudGo/widgets/blogItem.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-
 import 'package:timeago/timeago.dart' as timeago;
-// import 'package:StudGo/Screens/home.dart';
 
 final blogref = Firestore.instance.collection('blogs');
 

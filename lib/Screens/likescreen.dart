@@ -27,7 +27,6 @@ class _LikeScreenState extends State<LikeScreen> {
 
   void getuserLikes() async {
     DocumentSnapshot ref = await blogref.document(widget.blogid).get();
-    print(ref.data['likes']);
     setusers(context, ref);
   }
 

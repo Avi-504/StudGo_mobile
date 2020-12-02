@@ -15,8 +15,6 @@ class News with ChangeNotifier {
   void getNewsId() async {
     final doc = await http.get(url);
     newsId = json.decode(doc.body) as List;
-    // print(newsId);
-    // print(newsId[20]);
     notifyListeners();
   }
 }
