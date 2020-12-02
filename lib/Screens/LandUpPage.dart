@@ -451,7 +451,7 @@ class _LandUpPageState extends State<LandUpPage> {
                               Text(
                                 'More',
                                 style: TextStyle(
-                                  color: Colors.black,
+                                  color: Colors.white,
                                   fontSize: 24,
                                 ),
                               ),

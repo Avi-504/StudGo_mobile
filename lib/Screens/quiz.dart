@@ -35,7 +35,7 @@ class _QuizState extends State<Quiz> {
           }
           return GridView.builder(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 1, childAspectRatio: 3 / 1.8),
+                  crossAxisCount: 1, childAspectRatio: 3 / 1.7),
               cacheExtent: 100000000,
               scrollDirection: Axis.horizontal,
               itemCount: snapshot.data.documents.length,

@@ -1,5 +1,6 @@
 import 'package:StudGo/Screens/Os.dart';
 import 'package:StudGo/Screens/communities.dart';
+import 'package:StudGo/Screens/schedules.dart';
 import 'package:flutter/material.dart';
 
 class Features extends StatefulWidget {
@@ -94,18 +95,20 @@ class _FeaturesState extends State<Features> {
               height: MediaQuery.of(context).size.height * 0.15,
               width: MediaQuery.of(context).size.width * 0.9,
               decoration: BoxDecoration(
-                color: Colors.white12,
+                color: Colors.redAccent,
                 borderRadius: BorderRadius.circular(15),
               ),
               child: InkWell(
-                onTap: () => {},
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => Schedules(),
+                )),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'ABC',
+                      'Task Scheduler',
                       style: TextStyle(
-                        color: Colors.greenAccent,
+                        color: Colors.white,
                         fontSize: 18,
                       ),
                       textAlign: TextAlign.center,
